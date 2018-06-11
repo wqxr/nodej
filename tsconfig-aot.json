@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "outDir": "./webAppDist",
+        "sourceMap": true,
+        "module": "es2015",
+        "moduleResolution": "node",
+        "target": "es5",
+        "experimentalDecorators":true,
+        "emitDecoratorMetadata": true,
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "typeRoots": [
+            "../node_modules/@types/"
+        ]
+    },
+    "include": [
+        "./webApp/**/*"
+    ],
+    "angularCompilerOptions": {
+        "genDir": "aot",
+        "skipMetadataEmit" : true
+    }
+}

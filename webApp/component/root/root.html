@@ -1,0 +1,12 @@
+<article class="main">
+    <headinfo (changepassword)="changingpwd($event)" [headerinfo]="headerinfo" [planproductnum]="planproductnum"    [logs]="logs" [configinfomation]="configinfo" [machineStatus]="machineStatus" (configisShow)="showconfig($event)"  (isloginPanelShow)="loginshow($event)" [userinformation]="loginStatus" [goodnumber]="goodtotal" [CTendtime]="ctendtime" [failnumber]="failtotal" (isUseShowfun)="showfunlog($event)" (getplanProduct)="getplannum($event)" (outlogin)="outlogin($event
+    )"></headinfo>
+
+        <leftInfo  [protime]="protimenumber" [headerinfo]="headerinfo" [maxcheckinfo]="maxcheckinfo" [successinfo]="successinfo"  [pressdatainfo]="pressdata" [machineStatus]="machineStatus" [loginStatus]="loginStatus"  (getPresSN)="getPressSN($event)"></leftInfo>
+    
+    <footerinfo [assembling]="assembling" [configinfos]="configinfo" [headerinfo]="headerinfo" [pressSn]="pressSn" (getplanProduct)="getplannum($event)"></footerinfo>
+</article>
+<div class="mask" [hidden]="maskshow" ></div>
+<login-panel (loginResult)="getuserinfo($event)" (closeResult)="closechangepwd($event)"></login-panel>
+<log-panel class="dialog" [hidden]="logshow" (logpanelisShow)="showlogpanel($event)"></log-panel>
+<config-panel  [hidden]="configShow" class="dialog" (configisShow)="showconfig($event)" (configinfos)="showconfiginfo($event)" (sendProtime)="showProTime($event)" ></config-panel>

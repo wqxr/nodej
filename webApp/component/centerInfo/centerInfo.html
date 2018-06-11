@@ -1,0 +1,128 @@
+<section class="section">
+    <div class="left">
+        <!-- <div class="status">
+            <div class="con">
+                <span class="txt1">SFIS 上传</span><p [ngClass]="{'Okfont':shopflowStaus==='OK','NGfont':shopflowStaus==='NG'}">{{shopflowStaus}}</p>
+            </div>
+            
+        </div>
+        <div class="control-recoed">
+            <ul class="list" id="js_logDiv">
+                <li class="list_font" *ngFor="let log of logs ">{{log.time|date:'yyyy-MM-dd HH:mm:ss'}},{{log.loginfo}} </li>
+            </ul>
+        </div> -->
+        <div class="charts">
+            
+                </div>
+                <div class="presicioncharts">
+                    
+                        </div>
+    </div>
+    <div class="center">
+        <ul class="img">
+            <li *ngFor="let image of images" [ngStyle]="{'background-image':image}">
+            </li>
+            <li  *ngIf="images.length===0" style="background-image:url();color:red;font-size:28px;padding-top:80px">{{imginfo}}</li>
+            <li  *ngIf="images.length===0" style="background-image:url();color:red;font-size:28px;padding-top:80px">{{imginfo}}</li>
+            <li  *ngIf="images.length===0" style="background-image:url();color:red;font-size:28px;padding-top:80px">{{imginfo}}</li>
+            <li  *ngIf="images.length===0" style="background-image:url();color:red;font-size:28px;padding-top:80px">{{imginfo}}</li>
+        </ul>
+        <!-- <div class="resoult">
+            <div class="sn">
+                <span class="name">
+            贴合SN
+        </span>
+                <input type="text" name="" id="" [(ngModel)]="headerinfo.newSN" readonly="true">
+                <span class="name">
+            保压SN
+        </span>
+                <input type="text" name="" id="" [(ngModel)]="getPressSN" readonly="true">
+            </div>
+            <div class="sn">
+                <span class="name">
+            SN
+        </span>
+                <input type="text" name="" id="" [(ngModel)]="searchSN">
+                <input class="searchclass" type="button" value="查询SFC" (click)="searchSNinfo()" />
+                <input class="searchclass" type="button" value="上传SMT" (click)="putSMT()" />
+                <input class="searchclass" type="button" value="上传SFC" (click)="putSFC()" />
+
+            </div>
+            <div class="text">
+                <p>{{SFCmessage}}</p>
+            </div>
+      
+        </div> -->
+    </div>
+    <!-- <div class="right">
+        <div class="controls">
+            <div class="tabs">
+                <span [ngClass]="{'active':styleclass[0]===true}" (click)="switchtype(0)">ANIS</span>
+                <span [ngClass]="{'active':styleclass[1]===true}" (click)="switchtype(1)">ISO</span>
+                <span [ngClass]="{'active':styleclass[2]===true}" (click)="switchtype(2)">JIS</span>
+            </div>
+           
+        </div>
+        <div class="check-box1">
+            <ul class="check-box">
+               
+                <li [ngClass]="{'active':communciateStatus.safedoorclass==true}">安全门</li>
+                <li [ngClass]="{'active':communciateStatus.gunclass==true}">条码枪通信</li>
+                <li [ngClass]="{'active':communciateStatus.pressclass==true}">压力器通信</li>
+                <li [ngClass]="{'active':communciateStatus.ccdclass==true}">CCD通信</li>
+            </ul>
+            <div>
+                <label>
+                    <input type="checkbox" [(ngModel)]="workmodel.scanSN"  (change)="changedata(1)" [disabled]="machineStatus===8" >
+                    <span>扫码</span>
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="workmodel.passStation" (change)="changedata(2)" [disabled]="machineStatus===8" >
+                    <span>过站</span>
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="workmodel.IsPress" (change)="changedata(1)" [disabled]="machineStatus===8" >
+                    <span>保压</span>
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="workmodel.putSMT" (change)="changedata(1)" [disabled]="machineStatus===8" >
+                    <span>上传SMT</span>
+                </label>
+            </div>
+        </div>
+        <div class="detial1">
+        <ul class="detial">
+            <li>
+                <span class="num">{{headerinfo.totalnumber}}</span>
+                <span class="del">成品数量</span>
+            </li>
+            <li>
+                <span class="num">{{headerinfo.goodnumber}}</span>
+                <span class="del">良品数</span>
+            </li>
+            <li>
+                <span class="num">{{headerinfo.badnumber}}</span>
+                <span class="del">不良数</span>
+            </li>
+            <li>
+                <span class="num" *ngIf="headerinfo.totalnumber === 0">0%</span>
+                <span class="num" *ngIf="headerinfo.totalnumber !== 0">{{headerinfo.goodnumber/headerinfo.totalnumber*100|number:'2.1-2'}}%</span>
+                <span class="del">良品率</span>
+            </li>
+            <li>
+                <span class="num">{{headerinfo.CT|number:'2.1-2'}}s</span>
+                <span class="del">CT</span>
+            </li>
+
+        </ul>
+         <p>保压SN:<input type="text" name="" id=""  [(ngModel)]="pressSN"></p> 
+         <div class="up-button">
+               <input type="button" value="清除数据" (click)="cleardata()"/>
+        </div>
+        </div>
+        <div class="charts">
+
+        </div>
+       
+    </div> --> 
+</section>

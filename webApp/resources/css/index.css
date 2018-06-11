@@ -1,0 +1,1099 @@
+@import 'reset.css';
+@import 'iconfonts.css';
+.main {
+  position: relative;
+  width: 1600px;
+  height: 830px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.main .header {
+  position: relative;
+  width: 100%;
+}
+.main .header .title {
+  position: relative;
+  height: 2rem;
+  line-height: 2rem;
+  padding-left: 1rem;
+  float:left;
+}
+.main .header .nav {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.27);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+}
+.main .header .nav .logo {
+  position: relative;
+  width: 16%;
+  height: 100%;
+  background-image: url(../images/logo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  border-right: 1px solid rgba(0, 0, 0, 0.27);
+}
+.main .header .nav .controls {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #efefef;
+}
+.main .header .nav .controls .control-item {
+  position: relative;
+  width: 150px;
+  height: 100%;
+}
+.main .header .nav .controls .control-item span {
+  display: block;
+  width: 80px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 4rem;
+  margin: 7px auto;
+  cursor: pointer;
+}
+.main .header .nav .controls .control-item .log-out {
+  position: absolute;
+  background-color: #ffffff;
+  width: 96px;
+  z-index: 10000;
+  left: 50%;
+  transform: translateX(-50%) translateY(-1rem);
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+}
+.main .header .nav .controls .control-item .log-out li {
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+.main .header .nav .controls .control-item .log-out li:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+}
+.main .header .nav .controls .control-item .log-out li:hover {
+  background-color: #0091fa;
+  color: #ffffff;
+}
+.main .header .nav .controls .control-item .active {
+  background-color: #04fd03;
+}
+.main .header .nav .controls .control-item .icon-home {
+  color: #000000;
+}
+.main .header .nav .controls .control-item .icon-file2 {
+  color: #0091fa;
+}
+.main .header .nav .controls .control-item .icon-setting {
+  color: #0091fa;
+}
+.main .header .nav .controls .control-item .icon-start {
+  color: #008605;
+}
+.main .header .nav .controls .control-item .icon-refesh {
+  color: #f8e115;
+}
+.main .header .nav .controls .control-item .icon-hold-on {
+  color: #ff021e;
+}
+.main .header .nav .controls .control-item .icon-stop3 {
+  color: #525661;
+}
+.main .header .nav .controls .control-item .icon-users {
+  color: #0091fa;
+}
+.main .section {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  display: flex;
+}
+.main .section .left,
+.main .section .right {
+  position: relative;
+  height: 100%;
+  width: 30%;
+  padding: 0 1rem;
+}
+.main .section .center {
+  position: relative;
+  width: 67.5%;
+  height: 100%;
+}
+.main .section .center .img {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 466px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.main .section .center .img li {
+  width: 50%;
+   height: 50%; 
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  background-image: url(../images/123.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main .footer .right .resoult {
+  clear:both;
+  position: absolute;
+  width: 96.7%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  top: 100px;
+}
+.main .footer .right .resoult .sn {
+  position: relative;
+  width: 60%;
+  height: 2rem;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+.main .footer .right .resoult .sn span {
+  display: block;
+  min-width: 72px;
+  text-align: left;
+  padding: 0 1rem 0 0;
+  font-size: 1rem;
+}
+.main .footer .right .resoult .sn input {
+  display: block;
+  width: 270px;
+  height: 2rem;
+  line-height: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  padding: 0 1rem;
+  font-size: 1rem;
+  border-radius: 0.125rem;
+  margin-left: 15px;
+}
+.main .footer .right .resoult .sn input:nth-of-type(1) {
+  margin-right: 1rem;
+}
+.main .footer .right .resoult .sn input[type='button'] {
+  font-size: 14px !important;
+  width: 104px !important;
+  cursor: pointer;
+}
+.main .footer .right .resoult .sn + .sn {
+  margin-top: 0.5rem;
+}
+.main .footer .right .resoult .text {
+  position: absolute;
+  left: 60%;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.main .footer .right .resoult .mes {
+  position: relative;
+  display: flex;
+}
+.main .footer .right .resoult .mes > li {
+  width: 50%;
+  height: 3.25rem;
+  display: flex;
+  padding: 0 1rem;
+}
+.main .footer .right .resoult .mes > li > span {
+  padding-right: 0.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.main .footer .right .resoult .mes > li .num {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.main .footer .right .resoult .mes > li .num li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main .footer .right .resoult .mes > li .num li span:nth-of-type(2) {
+  padding: 0 0.5rem;
+}
+.main .section .left .status {
+  position: relative;
+  overflow: hidden;
+  height: 210px;
+}
+.main .section .left .status .con {
+  position: relative;
+  margin-top: 0.5rem;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #f3e2df;
+  background-color: #f1eeed;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.main .section .left .status .con p:nth-of-type(1){
+  position: absolute;
+  left: 1rem;
+  top: 6rem;
+  font-size: 3rem;
+}
+.main .section .left .status .con p:nth-of-type(2){
+  position: absolute;
+  left: 1rem;
+  top: 8rem;
+  font-size: 3rem;
+}
+.main .section .left .status .con .txt {
+  position: absolute;
+  left: 1rem;
+  top: 0.2rem;
+  font-size: 1.5rem;
+}
+.main .section .left .status .con .txt1 {
+  position: absolute;
+  left: 1rem;
+  top:2rem;
+  font-size: 2rem;
+}
+.main .section .left .control-recoed {
+  position: relative;
+  margin: 1rem 0 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+}
+.main .section .left .control-recoed:after {
+  content: '操作日志';
+  position: absolute;
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 0.25rem;
+  background-color: #ffffff;
+  left: 0.5rem;
+  top: -0.5rem;
+  z-index: 100;
+}
+.main .section .left .control-recoed .list {
+  position: relative;
+  margin: 1rem;
+  height: 264px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.main .section .left .control-recoed .list li {
+  position: relative;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0.5rem 0;
+  font-size:12px;
+}
+.main .footer .right .controls {
+  position: relative;
+  width: 100%;
+  height: 46px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main .footer .right .controls .select {
+  margin-left: 1rem;
+}
+.main .footer .right .check-box1{
+  width: 50%;
+  height:80px;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+}
+.main .footer .right .check-box1 div{
+  width: 30%;
+  height: 100px;
+  float: right;
+  margin-top: 7px;
+}
+.main .footer .right .check-box1 div label {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+.main .footer .right .check-box1 div label input {
+  position: relative;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.main .footer .right .check-box1 div label input:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background:  #00d800;
+}
+.main .footer .right .check-box1 div label input:checked:before {
+ 
+  background: #c9c9c9;
+}
+.main .footer .right .check-box {
+  position: relative;
+  width: 55%;
+  height: 90px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  float: left;
+}
+.main .footer .right .check-box li {
+  width: 24%;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  cursor: pointer;
+  background-color: #efefef;
+  border-radius: 0.25rem;
+  margin-top: 15px;
+  margin-left: 30px;
+  float: left;
+}
+.main .footer .right .check-box .active {
+  border-color: #71e57f;
+  background-color: #71e57f;
+}
+.main .footer .right .detial1{
+  border: 1px solid #ccc;
+  background-color: #fad9d2;
+  width: 50%;
+  height: 80px;
+}
+.main .footer .right  .detial1 .detial {
+  position: relative;
+  height: 80px;
+  background-clip: content-box;
+  justify-content: space-around;
+  align-items: center;
+  width:100%;
+}
+.main .footer .right .detial li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  float:left;
+  margin-left: 45px;
+  margin-top: 15px;
+  
+}
+.main .footer .right .detial li .num {
+  color: rgba(0, 0, 0, 0.87);
+  font-size:14px;
+}
+.main .footer .right .detial li .del {
+  font-size: 14px;
+}
+
+.main .section .left .charts , .main .section .left .presicioncharts {
+  position: relative;
+  width: 100%;
+  height: 45%;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  margin-bottom: 1rem;
+  margin-top: 15px;
+}
+.main .section .left .charts:after,.main .section .left .presicioncharts:after {
+  position: absolute;
+  height: 1rem;
+  line-height: 1rem;
+  left: 0.5rem;
+  top: -0.5rem;
+  padding: 0 0.5rem;
+  background-color: #ffffff;
+  z-index: 100;
+}
+.main .footer .right   .up-button {
+  position: relative;
+  width: 100%;
+  /* height: 2rem; */
+  text-align: center;
+  /* line-height: 2rem; */
+  font-size: 1.25rem;
+  margin-top: -32px;
+}
+.main .footer .right .up-button input{
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  background-color: #90cbf7;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  cursor: pointer;
+}
+.main .footer {
+  position: relative;
+  height: 240px;
+  width: 100%;
+  display: flex;
+ 
+}
+.main .footer .left {
+  position: relative;
+  width: 17%;
+  height:100%;
+  border: 1rem solid #ffffff;
+  background-color: #f5f5f5;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15px;
+}
+.main .footer .left .btn {
+  display: block;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  width: 200px;
+  font-size: 2.2rem;
+  /* border-top: 0.5rem solid; */
+  /* border-bottom: 0.5rem solid; */
+  /* border-left: 1rem solid; */
+  /* border-right: 1rem solid; */
+  /* border-color: #b4aed0; */
+  background-color: rgb(138, 137, 136);
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 10px;
+}
+.main .footer .right {
+  position: relative;
+  flex: 1;
+  height:220px;
+  margin-right: 1rem;
+
+  display: flex;
+  padding: 1rem 22px;
+  width: 70%;
+}
+.main .footer .right:after {
+  position: absolute;
+  left: 0.5rem;
+  top: -0.5rem;
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 0.5rem;
+  background-color: #ffffff;
+  z-index: 100;
+  display: flex;
+}
+.main .footer .right table {
+  width: 1250px;
+  height: 160px;
+  border-radius: 0.25rem;
+}
+.tabs {
+  position: relative;
+  display: flex;
+  height: 2rem;
+}
+.tabs span {
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  background-color: #b3f9b0;
+  border-top: 1px solid #116dfc;
+  border-right: 1px solid #116dfc;
+  border-bottom: 1px solid #116dfc;
+}
+.tabs span:first-child {
+  border-left: 1px solid #116dfc;
+}
+.tabs .active {
+  color: #fff;
+  background-color: #136ffe;
+}
+.select {
+  position: relative;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
+  min-width: 3.5rem;
+  cursor: pointer;
+  border: 1px solid #116dfc;
+  background-color: #b3f9b0;
+}
+.table {
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  text-align: center;
+}
+.table thead {
+  background-color: #e1e1e1;
+}
+.table tr {
+  height:1rem;
+  line-height: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.27);
+}
+.table tr:last-child {
+  border-bottom: none;
+}
+.dialog .dia-con .log-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.53);
+  z-index: 10000;
+}
+.login {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  height: 352px;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 100000;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 16px 8 rgba(0, 0, 0, 0.27);
+}
+.login .header {
+  position: relative;
+  height:2rem;
+  line-height: 4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.login .header .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.login .header .icon:hover {
+  transform-origin: center;
+  transform: rotate(180deg);
+}
+.login .user {
+  display: block;
+  height: 2rem;
+  line-height: 2.5rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 0.25rem;
+}
+.login .user:focus {
+  border-color: #2196f3;
+  outline: none;
+}
+.login .pas,
+.login .new {
+  display: block;
+  width: 80%;
+  margin: 2rem auto;
+  height: 2rem;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 0.25rem;
+  outline: none;
+}
+.login .pas:focus,
+.login .new:focus {
+  border-color: #2196f3;
+}
+.login .new {
+  display: none;
+}
+.login .error {
+  height: 1rem;
+  line-height: 1rem;
+  text-align: left;
+  color: red;
+  font-size: 12px;
+  padding: 0 10%;
+  margin-top: -2rem;
+}
+.login .pwdsuccess{
+  height: 1rem;
+  line-height: 1rem;
+  text-align: left;
+  color: green;
+  font-size: 12px;
+  padding: 0 10%;
+  margin-top: -2rem;
+}
+.login .forgot {
+  height: 1rem;
+  line-height: 1rem;
+  text-align: left;
+  color: #2196f3;
+  font-size: 12px;
+  padding: 0 10%;
+  text-align: right;
+  cursor: pointer;
+}
+.login .subbtn,
+.login .change-pas {
+  display: block;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1rem;
+  margin: 2rem auto;
+  border: none;
+  width: 80%;
+  background-color: #2196f3;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+.login .subbtn:active,
+.login .change-pas:active {
+  outline: none;
+}
+.login .change-pas {
+  display: none;
+}
+.login.change {
+  height: 408px;
+}
+.login.change .new {
+  display: block !important;
+}
+.login.change .subbtn {
+  display: none !important;
+}
+.login.change .change-pas {
+  display: block !important;
+}
+.login.change .forgot {
+  display: none;
+}
+.dialog {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #ffffff;
+  width: 1200px;
+  height: 720px;
+  z-index: 1000000;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  overflow-y: auto;
+}
+.dialog .dia-con {
+  position: relative;
+}
+.dialog .dia-con .close {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+.dialog .dia-con .close:hover {
+  transform: rotate(180deg);
+}
+.dialog .dia-con header h1 {
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+.dialog .dia-con station-a {
+  position: relative;
+  overflow: hidden;
+}
+.dialog .dia-con station-a .from {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.dialog .dia-con station-a .from label {
+  position: relative;
+  width: 50%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.dialog .dia-con station-a .from label span {
+  line-height: 2.5rem;
+  width: 120px;
+}
+.dialog .dia-con station-a .from label input {
+  display: block;
+  height: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+  width: 280px;
+}
+.dialog .dia-con station-a .from label input:focus {
+  border-color: #0091fa;
+}
+.dialog .dia-con station-a footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.dialog .dia-con station-a footer .btn {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  cursor: pointer;
+}
+.dialog .dia-con station-a footer .btn.btn-cancel {
+  border-color: #0091fa;
+  color: #0091fa;
+}
+.dialog .dia-con station-a footer .btn.btn-ok {
+  border-color: #0091fa;
+  color: #ffffff;
+  background-color: #0091fa;
+}
+.dialog .dia-con station-a footer .btn + .btn {
+  margin-left: 2rem;
+}
+.dialog .dia-con station-b {
+  position: relative;
+  overflow: hidden;
+}
+.dialog .dia-con station-b > div {
+  position: relative;
+  padding: 2rem 0;
+}
+.dialog .dia-con station-b > div .mm label {
+  position: relative;
+  display: flex;
+  margin-right: 1rem;
+}
+.dialog .dia-con station-b > div .mm label span {
+  display: block;
+  width: 5rem;
+  text-align: center;
+}
+.dialog .dia-con station-b > div > div {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+.dialog .dia-con station-b > div > div > span {
+  display: block;
+  width: 140px;
+}
+.dialog .dia-con station-b > div > div input {
+  height: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+  display: block;
+  width: 180px;
+}
+.dialog .dia-con station-b > div > div input:hover {
+  border-color: #0091fa;
+}
+.dialog .dia-con station-b > div .save {
+  justify-content: center;
+  margin-top: 2rem;
+}
+.dialog .dia-con station-b > div .save button {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  cursor: pointer;
+  margin-left:30px;
+  border-color: #0091fa;
+  color: #0091fa;
+}
+/* .dialog .dia-con station-b > div .save button .btn-ok{
+  border-color: #0091fa;
+  color: #0091fa;
+} */
+.dialog .dia-con io-panel {
+  position: relative;
+}
+.dialog .dia-con io-panel .check-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dialog .dia-con io-panel .check-group .card-title {
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  font-size: 2rem;
+  color: #0091fa;
+}
+.dialog .dia-con io-panel .check-group .ulclass {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dialog .dia-con io-panel .check-group .ulclass .switches {
+  position: relative;
+  width: 33.33%;
+  height: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+.dialog .dia-con io-panel .check-group .ulclass .switches label,
+.dialog .dia-con io-panel .check-group .ulclass .switches input {
+  position: absolute;
+  opacity: 0;
+}
+.dialog .dia-con io-panel .check-group .ulclass .switches span {
+  display: block;
+  width: 180px;
+}
+.dialog .dia-con io-panel .check-group .ulclass .switches button {
+  display: block;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 1rem;
+  border: 1px solid #0091fa;
+  color: #0091fa;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  outline: none;
+}
+.dialog .dia-con io-panel .check-group .ulclass .switches button.active {
+  background-color: #0091fa;
+  color: #ffffff;
+}
+.dialog .dia-con io-panel .check-group .ulclass .switches button:hover {
+  background-color: rgba(0, 145, 250, 0.19);
+}
+.dialog .dia-con io-panel .check-group .ulclass .switches button + button {
+  margin-left: 1rem;
+}
+.dialog .dia-con savepoint {
+  position: relative;
+}
+.dialog .dia-con savepoint .check-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dialog .dia-con savepoint .check-group .card-title {
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color: #0091fa;
+}
+.dialog .dia-con savepoint .check-group .ulclass-a {
+  display: flex;
+  width: 100%;
+}
+.dialog .dia-con savepoint .check-group .ulclass-a li {
+  width: 25%;
+  height: 1rem;
+  line-height: 1rem;
+  display: flex;
+}
+.dialog .dia-con savepoint .check-group .ulclass-a li input {
+  display: block;
+  width: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 0.25rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-a li .marginclass {
+  display: block;
+  min-width: 150px;
+  text-align: right;
+  margin-right: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-b {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 130px;
+}
+.dialog .dia-con savepoint .check-group .ulclass-b li {
+  position: relative;
+  width: 50%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-b li:last-child {
+  margin-bottom: 0;
+}
+.dialog .dia-con savepoint .check-group .ulclass-b li span {
+  
+  text-align: right;
+  margin-right: 1.5rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-b li input {
+  display: block;
+  width: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 0.25rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+}
+.dialog .dia-con savepoint .check-group .ulclass-b li input + input {
+  margin-left: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-c {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dialog .dia-con savepoint .check-group .ulclass-c li {
+  display: flex;
+  width: 25%;
+  margin-bottom: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+/* .dialog .dia-con savepoint .check-group .ulclass-c li:nth-of-type(0){
+  width: 25%
+} */
+.dialog .dia-con savepoint .check-group .ulclass-c li:last-child {
+  margin-bottom: 0;
+}
+.dialog .dia-con savepoint .check-group .ulclass-c li span {
+  min-width: 150px;
+  text-align: right;
+  margin-right: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-c li input {
+  display: block;
+  width: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 0.25rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-d,
+.dialog .dia-con savepoint .check-group .ulclass-e {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 120px;
+}
+.dialog .dia-con savepoint .check-group .ulclass-d li,
+.dialog .dia-con savepoint .check-group .ulclass-e li {
+  display: flex;
+  width: 50%;
+  margin-bottom: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-d li:last-child,
+.dialog .dia-con savepoint .check-group .ulclass-e li:last-child {
+  margin-bottom: 0;
+}
+.dialog .dia-con savepoint .check-group .ulclass-d li span:nth-of-type(1),
+.dialog .dia-con savepoint .check-group .ulclass-e li span:nth-of-type(1) {
+  min-width: 150px;
+  text-align: right;
+  margin-right: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-d li input,
+.dialog .dia-con savepoint .check-group .ulclass-e li input {
+  display: block;
+  width: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  border-radius: 0.25rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+.dialog .dia-con savepoint .check-group .ulclass-d li input + input,
+.dialog .dia-con savepoint .check-group .ulclass-e li input + input {
+  margin-left: 1rem;
+}
+.dialog .dia-con savepoint .btnclass {
+  border: none;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  background-color: #0091fa;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  outline: none;
+  margin-top: 30px;
+}
+/*自定义滾動條*/
+/* ::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #cccccc;
+} */
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: #7c8688;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: #71e57f;
+}

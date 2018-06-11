@@ -1,0 +1,59 @@
+<div>
+    <div class="mm">
+        <span>设置贴合精度(mm):</span>
+        <label>
+            <span>X(mm)</span>
+            <input type="text" [(ngModel)]="configs.precisionXinfo" [readonly]="machinestatus===8 || userrole===2" />
+        </label>
+        <label>
+             <span>Y(mm)</span>
+             <input type="text" [(ngModel)]="configs.precisionYinfo" [readonly]="machinestatus===8 || userrole===2" />      
+        </label>
+        <label>
+             <span>Angle(deg)</span>
+            <input type="text" [(ngModel)]="configs.precisionAngleinfo"  [readonly]="machinestatus===8  || userrole===2"/>  
+        </label>
+    </div>
+    <div class="mm">
+            <span>复检最大偏差:</span>
+        <label>
+            <span>X(mm)</span>
+            <input type="text" [(ngModel)]="configs.checkXoffset" [readonly]="machinestatus===8 ||userrole===2"/>
+        </label>
+        <label>
+             <span>Y(mm)</span>
+             <input type="text" [(ngModel)]="configs.checkYoffset" [readonly]="machinestatus===8 ||userrole===2"/>      
+        </label>
+        <label>
+             <span>Angle(deg)</span>
+            <input type="text" [(ngModel)]="configs.checkAoffset" [readonly]="machinestatus===8 || userrole===2"/>  
+        </label>
+    </div>
+    <div class="mm">
+        <span> 补  偿：</span>
+        <label>
+            <span>X(mm)</span>
+            <input type="text" [(ngModel)]="configs.offsetXinfo" [readonly]="machinestatus===8 || userrole===2" />
+        </label>
+        <label>
+            <span>Y(mm)</span>
+            <input type="text" [(ngModel)]="configs.offsetYinfo"  [readonly]="machinestatus===8 || userrole===2"/>
+        </label>
+        <label>
+            <span>Angle(deg)</span>
+            <input type="text" [(ngModel)]="configs.offsetAngleinfo"  [readonly]="machinestatus===8 || userrole===2" />
+        </label>
+    </div>
+    <div class="set">
+        <span>保压时间(ms)：</span>
+        <input type="text" [(ngModel)]="configs.proTime" [readonly]="machinestatus===8 || userrole===2"/>
+    </div>
+    <div class="set">
+        <span>压力值设定(kg)：</span>
+        <input type="text" [(ngModel)]="configs.pressdata" [readonly]="machinestatus===8 || userrole===2"/>
+    </div>
+    <div class="save">
+        <button (click)="changeconfig()"  [ngClass]="{'btnstyle':clickclass[0]===true}">保存</button>
+        <button (click)="cancel()"  [ngClass]="{'btnstyle':clickclass[1]===true}">取消</button>
+    </div>
+</div>

@@ -1,0 +1,251 @@
+<div class="dia-con" id="pointteacher">
+    <section>
+        <div class="check-group">
+            <h3 class="card-title">上料Z轴</h3>
+           
+            <ul class="ulclass-c">
+                <li>
+                    <span class="marginclass">进料位:(mm) Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[0][3].Xpoint" [readonly]="machinestatus===8 || userrole===2"> 
+                </li>
+                <li>
+                    <span class="marginclass">取膜位: (mm) Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[0][4].Xpoint" [readonly]="machinestatus===8 || userrole===2">      
+                </li>
+            </ul>
+            <h3 class="card-title">CCD工站</h3>
+            
+            <ul class="ulclass-c">
+                <li>
+                    <span class="marginclass">流水线前端拍照上方: (mm) Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[1][2].Xpoint" [readonly]="machinestatus===8 || userrole===2"> 
+                </li>
+                <li>
+                    <span class="marginclass">前端载板拍照位: (mm) Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[1][4].Xpoint" [readonly]="machinestatus===8 || userrole===2">      
+                </li>
+                <li>
+                    <span class="marginclass">前端薄膜拍照位:  (mm) Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[1][5].Xpoint" [readonly]="machinestatus===8 || userrole===2">      
+                </li>
+            </ul>
+          
+           
+
+            <h3 class="card-title">取料膜工站</h3>
+            <div style="width:100%">
+                    <ul class="pointulclass" style="margin-left: 130px;">
+                      <li>Y(mm)</li>
+                      
+                      <li>Z(mm)</li>
+                     
+                      <li style="margin-left:430px">Y(mm)</li>
+                     
+                      <li>Z(mm)</li>
+                    </ul>
+                </div>
+            
+            <ul class="ulclass-d">
+                <li>
+                    <span class="marginclass">取膜位高度:</span>
+
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][3].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][3].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">取膜位:</span>
+
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][4].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][4].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">拨膜高度:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][5].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][5].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+
+
+                <li>
+                    <span class="marginclass">安全位: </span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][1].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                 <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][1].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">拍照位:</span>
+
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][7].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                   <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][7].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">流水线上方:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][8].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][8].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+
+                <li>
+                    <span class="marginclass">贴膜位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][9].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                     <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[5][9].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+
+
+            </ul>
+            <h3 class="card-title">吸膜工站</h3>
+            <div style="width:100%">
+                    <ul class="pointulclass" style="margin-left: 130px;">
+                      <li>X(mm)</li>
+                      
+                      <li>Z(mm)</li>
+                     
+                      <li style="margin-left:430px">X(mm)</li>
+                     
+                      <li>Z(mm)</li>
+                    
+                    </ul>
+                </div>
+            <ul class="ulclass-e">
+
+                <!-- <li>
+                    <span>二次定位放膜位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][8].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][8].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li> -->
+                <li>
+                    <span>吸膜位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][3].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][3].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <!-- <li>
+                    <span>吸膜结束位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[4][2].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[4][2].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li> -->
+
+
+                <li>
+                    <span class="marginclass">安全位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][1].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][1].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">放膜位置:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][4].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][4].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">X轴到放膜位上方:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][7].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[6][7].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+
+            </ul>
+            <h3 class="card-title">保压工站</h3>
+            <ul class="ulclass-c">
+                <li>
+                    <span class="marginclass">来料安全位(mm):  Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[3][2].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">固定PCB板位(mm):  Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[3][3].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">保压位(mm):  Z </span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[3][4].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">保压出料等待位(mm):  Z </span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[3][5].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+            </ul>
+            <!-- <h3 class="card-title">CCD工站</h3>
+            <ul class="ulclass-a">
+                <li>
+                    <span class="marginclass">流水线前端拍照上方(mm)：  Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[0][0].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">前端载板拍照位(mm):  Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[0][1].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">前端薄膜拍照位(mm): Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[0][2].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">标定板位(mm):  Z</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[0][3].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+            </ul> -->
+           
+            <h3 class="card-title">流水线工站</h3>
+            <div style="width:100%">
+                <ul class="pointulclass">
+                  <li>X(mm)</li>
+                  <li>Y(mm)</li>
+                  <li>Z(mm)</li>
+                  <li>U(deg)</li>
+                  <li style="margin-left:240px">X(mm)</li>
+                  <li>Y(mm)</li>
+                  <li>Z(mm)</li>
+                  <li>U(deg)</li>
+                </ul>
+            </div>
+            <ul class="ulclass-b">
+                <li>
+                    <span  class="marginclass">贴合补偿:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][0].Xpoint">
+                    <input type="text" name="" id="" class="teachpoint"   [(ngModel)]="getpointInfo[2][0].Ypoint">
+                    <input type="text" name="" id="" class="teachpoint"  [(ngModel)]="getpointInfo[2][0].Zpoint">
+                    <input type="text" name="" id="" class="teachpoint"  [(ngModel)]="getpointInfo[2][0].Upoint">
+                    
+                </li>
+                <li>
+                    <span class="marginclass">来料安全位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][1].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][1].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][1].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][1].Upoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">固定PCB板位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][2].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][2].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][2].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                   <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][2].Upoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <li>
+                    <span class="marginclass">PCB拍照位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][3].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][3].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][3].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                   <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][3].Upoint" [readonly]="machinestatus===8 || userrole===2">
+                </li>
+                <!-- <li>
+
+                    <span class="marginclass">拍照贴合位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[1][2].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[1][2].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[1][2].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[1][2].Upoint" [readonly]="machinestatus===8 || userrole===2">
+                </li> -->
+
+                <li>
+                    <span class="marginclass" style="margin-left: 40px">标定位:</span>
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][7].Xpoint" [readonly]="machinestatus===8 || userrole===2">
+                   <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][7].Ypoint" [readonly]="machinestatus===8 || userrole===2">
+                    <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][7].Zpoint" [readonly]="machinestatus===8 || userrole===2">
+                   <input type="text" name="" id="" class="teachpoint" [(ngModel)]="getpointInfo[2][7].Upoint" [readonly]="machinestatus===8 || userrole===2">
+
+                </li>
+                 
+              
+
+
+
+            </ul>
+           
+        </div>
+        <input type="button" value="保存" class="btnclass" (click)="savepoint()">
+    </section>
+</div>

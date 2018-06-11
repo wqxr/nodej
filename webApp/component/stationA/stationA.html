@@ -1,0 +1,55 @@
+<section>
+    <div class="from">
+        <label>
+            <span>Header</span>
+            <input id="src" type="text" name=""  placeholder="" [(ngModel)]="config.Ip" [readonly]="machinestatus===8 || userrole===2"/>
+        </label>
+        <label>
+            <span>Station</span>
+            <input id="sn" type="text" name=""  placeholder="" [(ngModel)]="config.Station" [readonly]="machinestatus===8 || userrole===2" />
+        </label>
+        <label>
+            <span>StationID</span>
+            <input id="sn" type="text" name=""  placeholder="" [(ngModel)]="config.StationID" [readonly]="machinestatus===8 || userrole===2" />
+        </label>
+        <label>
+            <span>StationNo</span>
+            <input id="sn" type="text" name=""  placeholder="" [(ngModel)]="config.StationNo"  [readonly]="machinestatus===8 || userrole===2"/>
+        </label>
+        <label>
+            <span>MAC_ADDR</span> 
+            <input id="sn" type="text" name=""  placeholder="" [(ngModel)]="config.MAC_ADDR" [readonly]="machinestatus===8 || userrole===2"/>
+        </label>
+        <label>
+            <span>Line</span>
+            <input id="sn" type="text" name=""  placeholder="" [(ngModel)]="config.line" [readonly]="machinestatus===8 || userrole===2"/>
+        </label>
+        <label>
+            <span>Stage</span>
+            <input id="sn" type="text" name="" placeholder="" [(ngModel)]="config.stage" [readonly]="machinestatus===8 || userrole===2"/>
+        </label>
+        <label>
+            <span>Version</span>
+            <input id="sn" type="text" name=""  placeholder="" [(ngModel)]="config.version" [readonly]="machinestatus===8 || userrole===2"/>
+        </label>
+        <label>
+            <span>PlanCT</span>
+            <input id="sn" type="text" name="" placeholder="" [(ngModel)]="config.planCT" [readonly]="machinestatus===8 || userrole===2"/>
+        </label>
+      
+        <!-- <label>
+            <span>
+                保存路径
+            </span>
+            <input type="text" readonly [(ngModel)]="config.savePath">
+        </label> -->
+        <!-- <div class="save-path">
+            <span>保存路径</span>
+            <p>{{config.savePath}}</p>
+        </div> -->
+    </div>
+</section>
+<footer>
+    <button type="button" class="btn btn-cancel" [ngClass]="{'btn-ok':clickclass[1]===true}" (click)="cancel()">取消</button>
+    <button type="button" class="btn btn-cancel" (click)="saveConfig()" [ngClass]="{'btn-ok':clickclass[0]===true}">保存</button>
+</footer>

@@ -1,0 +1,13 @@
+{
+    "version": "v0.0.1",
+    "msgId": "6243d3fb-8b4b-46eb-aa5f-795fdfe9eeab",
+    "msgType": "opsStatus",
+    "timestamp": "20171202191404454",
+    "errCode": 0,
+    "errMsg": " ",
+    "data": {
+        
+            "status": 3
+        
+    }
+}

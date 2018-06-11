@@ -1,0 +1,26 @@
+<div class="dia-con">
+    <span class="close" (click)="onclose()">X</span>
+    <header>
+      <h1>配置参数</h1>
+    </header>
+    <div class="tabs">
+      <span  [ngClass]="{'active':showFlag[0]}" (click)="openStationA()">
+          shopflows参数
+      </span>
+      <span   [ngClass]="{'active':showFlag[1]}" (click)="openstationB()">
+          机器参数
+      </span>
+      <span  [ngClass]="{'active':showFlag[2]}" (click)="openIOpanel()">
+        IO面板
+    </span>
+    <span  [ngClass]="{'active':showFlag[3]}" (click)="openTeacher()">
+        示教面板
+    </span>
+  </div>
+  <station-a [hidden]="stationAshow"  (configinfos)="showconfiginfo($event)" (ioisShow)="maskhidden($event)" ></station-a>
+  <station-b [hidden]="stationBshow"  (sendProTime)="showProTime($event)"></station-b>
+  <io-panel  [hidden]="openIOshow"></io-panel>
+  <savepoint [hidden]="openteacherPoint"></savepoint>
+ </div>
+ 
+    

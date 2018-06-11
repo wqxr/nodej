@@ -1,0 +1,56 @@
+<div class="dia-con table">
+    <span class="close" (click)="onclose()">X</span>
+    <header>
+        <h1>
+            点位面板
+        </h1>
+    </header>
+    <section>
+        <div class="tabs">
+            <span  [ngClass]="{'active':showFlag[0]}" (click)="openStationA()">
+                工站A
+            </span>
+            <span   [ngClass]="{'active':showFlag[1]}" (click)="openstationB()">
+                工站B
+            </span>
+        </div>
+        <station-a [hidden]="stationAshow" ></station-a>
+        <station-b [hidden]="stationBshow"></station-b>
+        <!-- <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>X</th>
+                    <th>y</th>
+                    <th>z</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table> -->
+    </section>
+</div>

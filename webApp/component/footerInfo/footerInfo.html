@@ -1,0 +1,145 @@
+<footer class="footer">
+    <div class="left">
+        <span class="btn" [ngClass]="{'success':(machineStatus === 4||machineStatus === 8),'warning':machineStatus===0||machineStatus===1||machineStatus===2||machineStatus===3||machineStatus===5,'readystatus':machineStatus==6,'stopstauts':machineStatus===7}">
+           {{status}}
+        </span>
+            <input type="button"  value="手动保压" class="btn2" (click)="letspress(5)" [ngClass]="{'btnok':letpressclass[0]===true}" />
+            <input type="button"  value="流板模式" class="btn2" (click)="letspress(6)" [ngClass]="{'btnok':letpressclass[1]===true}" />
+
+        
+    </div>
+    <div class="right">
+        <!-- <div class="controls">
+            <div class="tabs">
+                <span [ngClass]="{'active':styleclass[0]===true}" (click)="switchtype(0)">ANIS</span>
+                <span [ngClass]="{'active':styleclass[1]===true}" (click)="switchtype(1)">ISO</span>
+                <span [ngClass]="{'active':styleclass[2]===true}" (click)="switchtype(2)">JIS</span>
+            </div>
+           
+        </div> -->
+        <div class="check-box1">
+            <ul class="check-box">
+               
+                <li [ngClass]="{'active':communciateStatus.safedoorclass==true}">安全门</li>
+                <li [ngClass]="{'active':communciateStatus.gunclass==true}">条码枪通讯</li>
+                <li [ngClass]="{'active':communciateStatus.pressclass==true}">压力器通讯</li>
+                <li [ngClass]="{'active':communciateStatus.ccdclass==true}">CCD通讯</li>
+                <li [ngClass]="{'active':communciateStatus.sfcclass==true}">SFC通讯</li>
+            </ul>
+            <div>
+                <label>
+                    <input type="checkbox" [(ngModel)]="workmodel.scanSN"  (change)="changedata(1)" [disabled]="machineStatus===8" >
+                    <span>扫码</span>
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="workmodel.passStation" (change)="changedata(2)" [disabled]="machineStatus===8" >
+                    <span>过站</span>
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="workmodel.IsPress" (change)="changedata(1)" [disabled]="machineStatus===8" >
+                    <span>保压</span>
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="workmodel.putSMT" (change)="changedata(1)" [disabled]="machineStatus===8" >
+                    <span>上传SMT</span>
+                </label>
+            </div>
+        </div>
+        <div class="detial1">
+        <ul class="detial">
+            <li>
+                <span class="num">{{headerinfo.totalnumber}}</span>
+                <span class="del">成品数量</span>
+            </li>
+            <li>
+                <span class="num">{{headerinfo.goodnumber}}</span>
+                <span class="del">良品数</span>
+            </li>
+            <li>
+                <span class="num">{{headerinfo.badnumber}}</span>
+                <span class="del">不良数</span>
+            </li>
+            <li>
+                <span class="num" *ngIf="headerinfo.totalnumber === 0">0%</span>
+                <span class="num" *ngIf="headerinfo.totalnumber !== 0">{{headerinfo.goodnumber/headerinfo.totalnumber*100|number:'2.1-2'}}%</span>
+                <span class="del">良品率</span>
+            </li>
+            <li>
+                <span class="num">{{headerinfo.CT|number:'2.1-2'}}s</span>
+                <span class="del">CT</span>
+            </li>
+            <li>
+                <input type="text" class="planProduct"  [(ngModel)]="planProductNum" (ngModelChange)="getPlanNum($event)" [readonly]="machineStatus===8 "/>
+                <span class="del">计划生产个数</span>
+            </li>
+
+        </ul>
+        
+         <div class="up-button">
+               <input type="button" value="清除数据" (click)="cleardata()"/>
+        </div>
+        </div> 
+
+        <div class="resoult">
+            <div class="sn">
+                <span class="name">
+            贴合SN
+        </span>
+                <input type="text" name="" id="" [(ngModel)]="headerinfo.newSN" readonly="true">
+                <span class="name">
+            保压SN
+        </span>
+                <input type="text" name="" id="" [(ngModel)]="pressSn" readonly="true">
+            </div>
+            <div class="sn">
+                <span class="name">
+            SN
+        </span>
+                <input type="text" name="" id="" [(ngModel)]="searchSN">
+                <input class="searchclass" type="button" value="查询SFC" (click)="searchSNinfo()" />
+                <input class="searchclass" type="button" value="上传SMT" (click)="putSMT()" />
+                <input class="searchclass" type="button" value="上传SFC" (click)="putSFC()" />
+
+            </div>
+            <div class="text">
+                <p>{{SFCmessage}}</p>
+            </div>
+      
+        </div>
+        </div>
+    <!-- <div class="right">
+        <table class="table">
+            <thead>
+                <tr>
+                    
+                    <th>SN</th>
+                    <th>工单号</th>
+                    <th>时间</th>
+                    <th>设备id</th>
+                    <th>贴合精度</th>
+                    <th>复检信息</th>
+                    <th>对位次数</th>
+                    <th>保压时间(s)</th>    
+                    <th>压力值(kg)</th>
+                    <th>结果</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of assembling.detailproduct;" class="productclass">
+                    <td>{{item.SN}}</td>
+                    <td>{{item.jobNumber}}</td>
+                    <td>{{item.time}}</td>
+                    <td>{{configinfos.configid}}</td>
+                    <td>{{item.precision}}</td>
+                    <td>{{item.checkinfo}}</td>
+                    <td>{{item.matchtimes}}</td>
+                    <td>{{item.presstime}}</td>
+                    <td>{{item.pressdata}}</td>
+                    <td>{{item.result}}</td>     
+      
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+</footer>

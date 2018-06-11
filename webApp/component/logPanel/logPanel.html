@@ -1,0 +1,18 @@
+<div  class="dia-con" >
+    <span class="close" (click)="onclose()">X</span>
+    <header>
+        <h1>日志面板</h1>
+    </header>
+    
+    <section class="log-panel" >
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let rowItem of rowArray;let i=index">
+                    <td *ngIf="i===0" style="border:1px solid rgb(87, 83, 83)">number</td>
+                    <td *ngIf="i>=1" style="border:1px solid rgb(87, 83, 83)">{{i}}</td>
+                    <td *ngFor="let tdItem of rowItem" style="border:1px solid rgb(87, 83, 83)">{{tdItem}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+  </div>

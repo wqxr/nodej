@@ -1,0 +1,49 @@
+<header class="header">
+    
+                <h3 class="title">
+                  版本号：{{configinfomation.version}}
+                </h3>
+    
+                <div class="nav">
+                    <div class="logo"></div>
+                    <ul class="controls">
+                        <li class="control-item">
+                            <p><input type="button" value="空跑模式" class="proclass" (click)="textmodel()"   [ngClass]="{'active':productclass[0]==true}" ></p>
+                            <p><input type="button" value="生产模式" class="proclass" (click)="productmodel()" [ngClass]="{'active':productclass[1]==true}"></p>
+                            <!-- <span class=" icon icon-home" [ngClass]="{'active':styleclass[0]==true}"></span> -->
+                        </li>
+                        <li class="control-item">
+                                <p><input type="button" [value]="repairtime" (click)="repair()" class="proclass" [ngClass]="{'active':isrepaire===true}" ></p>
+                                <p><input type="button" [value]="protecttime" (click)="matain()" class="proclass"  [ngClass]="{'active':ismatain===true}"></p>
+
+                        </li>
+                        <li class="control-item" (click)="openLogPanel()">
+                            <span class="icon icon-file2"  [ngClass]="{'active':styleclass[1]==true}" title="日志面板"></span>
+                        </li>
+                        <li class="control-item" (click)="showConfig()" >
+                            <span class="icon icon-setting" [ngClass]="{'active':styleclass[2]==true}" title="配置面板"> </span>
+                        </li>
+                        <li class="control-item" (click)="startUp()" >
+                            <span class="icon icon-start" [ngClass]="{'active':styleclass[3]==true}" title="启动"> </span>
+                        </li>
+                        <li class="control-item" (click)="reset()" >
+                            <span class="icon icon-refesh" [ngClass]="{'active':styleclass[4]==true}" title="复位"></span>
+                        </li>
+                        <li class="control-item" (click)="suspend()" >
+                            <span class="icon icon-hold-on" [ngClass]="{'active':styleclass[5]==true}" title="暂停"></span>
+                        </li>
+                        <li class="control-item" (click)="emergencyStop()" >
+                            <span class="icon icon-stop3" [ngClass]="{'active':styleclass[6]==true}" title="停止"></span>
+                        </li>
+                        <li class="control-item" (click)="loginoutin()">
+                            <span class="icon icon-users" [ngClass]="{'active':styleclass[7]}" title="登录"></span>
+                            <ul class="log-out" [hidden]="showloginout">
+                                <li (click)="loginin()">{{loginstatus}}</li>
+                                <li  *ngIf="userinformation.role ==='管理员'"  (click)="changpwd()">修改密码</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+    

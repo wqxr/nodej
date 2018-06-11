@@ -1,0 +1,12 @@
+logs/*
+!.gitkeep
+node_modules/
+.vscode
+temp
+electron*
+webApp/**/*.js
+webApp/**/*.map
+dist
+webAppDist
+aot
+.idea

@@ -1,0 +1,9 @@
+[2017-09-05 12:40:51.614] [DEBUG] message - {"data":"hello, ray","msgId":"6553d4d0-91f4-11e7-8b96-0790da2f3509","msgType":"ssssss","timestamp":1504586451613,"version":"v1.0.0"}
+[2017-09-05 12:42:45.096] [DEBUG] message - {"data":"hello, ray","msgId":"a8f7f680-91f4-11e7-8d33-0b43c1010c02","msgType":"ssssss","timestamp":1504586565096,"version":"v1.0.0"}
+[2017-09-05 12:43:28.487] [DEBUG] message - {"data":"hello, ray","msgId":"c2d4e770-91f4-11e7-8d33-0b43c1010c02","msgType":"ssssss","timestamp":1504586608487,"version":"v1.0.0"}
+[2017-09-05 12:43:35.186] [DEBUG] message - {"data":"hello, ray","msgId":"c6d2f010-91f4-11e7-b1db-957c2ac9d545","msgType":"ssssss","timestamp":1504586615185,"version":"v1.0.0"}
+[2017-09-05 12:44:05.127] [DEBUG] message - {"data":"hello, ray","msgId":"d8abb970-91f4-11e7-b1db-957c2ac9d545","msgType":"ssssss","timestamp":1504586645127,"version":"v1.0.0"}
+[2017-09-05 13:36:48.192] [DEBUG] message - {"data":"hello, ray","msgId":"36012400-91fc-11e7-95d2-c15ac5bf1ec6","msgType":"ssssss","timestamp":1504589808192,"version":"v1.0.0"}
+[2017-09-05 13:36:48.205] [DEBUG] message - {"data":"hello, ray","msgId":"36031fd0-91fc-11e7-95d2-c15ac5bf1ec6","msgType":"ssssss","timestamp":1504589808205,"version":"v1.0.0"}
+[2017-09-05 13:37:15.731] [DEBUG] message - {"data":"hello, ray","msgId":"466b4230-91fc-11e7-bef6-a7ae08319e7c","msgType":"ssssss","timestamp":1504589835731,"version":"v1.0.0"}
+[2017-09-05 13:37:54.438] [DEBUG] message - {"data":"hello, ray","msgId":"5d7d5350-91fc-11e7-bef6-a7ae08319e7c","msgType":"ssssss","timestamp":1504589874437,"version":"v1.0.0"}

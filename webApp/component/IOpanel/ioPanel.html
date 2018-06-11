@@ -1,0 +1,87 @@
+<div class="dia-con">
+        <div class="tabs">
+                <label class="panel-tab" (click)="switchTab(0)" [ngClass]="{'tab-active':!iOList[0].hidden}">Card1</label>
+                <label class="panel-tab" (click)="switchTab(1)" [ngClass]="{'tab-active':!iOList[1].hidden}">Card2</label>
+                <label class="panel-tab" (click)="switchTab(2)" [ngClass]="{'tab-active':!iOList[2].hidden}">Card3</label>       
+        </div>
+    <!-- <span class="close" (click)="onclose()">X</span> -->
+    <section>
+        <div class="check-group">
+            <div *ngFor="let item of iOList;let i=index;" [hidden]="item.hidden">
+                <div *ngIf="item.reactIOList.length > 0">
+                    <h3 class="h3class">光纤</h3>
+                    <ul style="width:140px;float:left;margin-top:-10px;min-width: 240px;" *ngFor="let optical of item.reactIOList">
+                        <li class='switches read-only' style="width:100%">
+                            <input type="checkbox" id="checkbox2" name="emulate-button" disabled="disabled">
+                            <label for="checkbox2" [ngClass]="{'active1':ioCards[optical.cardId][optical.index].input==='1'}"></label>
+                            <span>{{optical.name}}</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div  style="width:100%;clear:both" *ngIf="item.cylinderIOList.length > 0 " >
+                    <h3 class="h3class">气缸</h3>
+                    <ul *ngFor="let cylinder of item.cylinderIOList" [ngClass]="{'changebigwidth':cylinder.originalReact.name!==''}">
+                        <li class='switches' [ngClass]="{'changewidth':cylinder.originalReact.name!==''}">
+                            <input type="checkbox" [id]=(cylinder.activity.name) name="emulate-button">
+                            <label [for]=(cylinder.activity.name) (click)="operateIo(cylinder.activity)" [ngClass]="{'checked':cylinder.activity?.value===1}"></label>
+                            <span>{{cylinder.activity?.name}}</span>
+                        </li>
+    
+                        <li class='switches' *ngIf="cylinder.original.name!==''" [ngClass]="{'changewidth':cylinder.originalReact.name!==''}">
+                            <input type="checkbox" [id]=(cylinder.original?.name) name="emulate-button">
+                            <label [for]=(cylinder.original?.name) (click)="operateIo(cylinder.original)" [ngClass]="{'checked':cylinder.original?.value===1}"></label>
+                            <span>{{cylinder.original?.name}}</span>
+                        </li>
+                        <li class='switches read-only' *ngIf="cylinder.activityReact.name!==''" [ngClass]="{'changewidth':cylinder.originalReact.name!==''}">
+                            <input type="checkbox" [id]=(cylinder.activityReact?.name) name="emulate-button" disabled="disabled">
+                            <label [for]=(cylinder.activityReact?.name)  [ngClass]="{'active1':ioCards[cylinder.activityReact.cardId][cylinder.activityReact.index].input==='1'}"></label>
+                            <span>{{cylinder.activityReact?.name}}</span>
+                        </li>
+                        <li class='switches read-only' *ngIf="cylinder.originalReact.name!==''" [ngClass]="{'changewidth':cylinder.originalReact.name!==''}">
+                            <input type="checkbox" [id]=(cylinder.originalReact?.name) name="emulate-button" disabled="disabled">
+                            <label [for]=(cylinder.originalReact?.name) [ngClass]="{'active1':ioCards[cylinder.originalReact.cardId][cylinder.originalReact.index].input==='1'}"></label>
+                            <span>{{cylinder.originalReact?.name}}</span>
+                        </li>
+    
+                    </ul>
+                </div>
+                <div style="clear:both;width:100%"   *ngIf="item.nozzleList.length > 0">
+                    <h3 class="h3class">真空</h3>
+                    <ul *ngFor="let nozzle of item.nozzleList;let j=index;">
+                        <li class='switches'>
+                            <input type="checkbox" [id]=(nozzle.control.name) name="emulate-button">
+                            <label [for]=(nozzle.control.name) (click)="operateIo(nozzle.control)" [ngClass]="{'checked':nozzle.control?.value===1}"></label>
+                            <span>{{nozzle.control.name}}</span>
+                        </li>
+                        <li class='switches' *ngIf="nozzle.react.name!==''">
+                            <input type="checkbox" [id]=(nozzle.react?.name) class="checkbox" name="emulate-button">
+                            <label [for]=(nozzle.react?.name) [ngClass]="{'checked':nozzle.react?.value===1}" (click)="operateIo(nozzle.react)"></label>
+                            <span>{{nozzle.react.name}}</span>
+                        </li>
+                        <li class='switches read-only' *ngIf="nozzle.controlreact.name!==''">
+                            <input type="checkbox" [id]=(nozzle.controlreact?.name) class="checkbox2" name="emulate-button" disabled="disabled">
+                            <label [for]=(nozzle.controlreact?.name) [ngClass]="{'active1':ioCards[nozzle.controlreact.cardId][nozzle.controlreact.index].input==='1'}"></label>
+                            <span>{{nozzle.controlreact.name}}</span>
+                        </li>
+                    </ul>
+    
+                </div>
+                <div style="clear:both;width:100%"  *ngIf="item.otherIoList.length > 0 ">
+                    <h3 class="h3class">其他</h3>
+                    <ul *ngFor="let cylinder of item.otherIoList" style="width:250px;float:left;min-width: 240px;">
+                        <li class='switches' style="width:80%">
+                            <input type="checkbox" [id]=(cylinder.name) name="emulate-button">
+                            <label [for]=(cylinder.name) (click)="operateIo(cylinder)" [ngClass]="{'checked':cylinder?.value===1}"></label>
+                            <span style="height:30px">{{cylinder.name}}</span>
+                        </li>
+    
+                        
+    
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+</div>
